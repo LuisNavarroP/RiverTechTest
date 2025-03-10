@@ -50,7 +50,7 @@ namespace API
             var expectedUser = new userResponse
             {
                 id = 1,
-                name = "Leannes Graham",
+                name = "Leanne Graham",
                 username = "Bret",
                 email = "Sincere@april.biz",
                 phone = "1-770-736-8031 x56442",
