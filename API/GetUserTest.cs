@@ -8,19 +8,12 @@ using LightBDD.NUnit3;
 
 namespace API
 {
-    /// <summary>
-    /// This test automates the user get proccess.
-    /// It includes the steps of send the get user request, assert the status code of the request and assert the content of the response,
-    /// The tests use LightBDD for the driven testing,RestSharp for the API request, Newtonsoft.Json for the response deserialization,
-    /// and FluentAssertions for assertions.
-    /// </summary>
     [FeatureDescription(
     @"In order to retrieve user details
     As an API consumer
     I want to fetch user information from the endpoint")]
     public partial class UserApiTests : FeatureFixture
     {
-        // Variables to store the response status code and the response body
         private HttpStatusCode _statusCode;
         private userResponse _responseBody;
 
@@ -35,7 +28,7 @@ namespace API
                 );
         }
 
-        // Sending a GET request to fetch user details,the response code and assign each one to a variable
+        // Setting the endpoint and sending a get request
         private void Given_the_get_user_endpoint_and_the_get_request_sent_then_store_the_response()
         {
             var endpoint = "https://jsonplaceholder.typicode.com/users/1";
@@ -51,13 +44,13 @@ namespace API
             _statusCode.Should().Be(HttpStatusCode.OK);
         }
 
-        // Setting the expected user details and asserting the response body comparing it with the expected user
+        // Setting the expected user details and asserting it
         private void Then_assert_the_fetched_data_with_the_expected_user()
         {
             var expectedUser = new userResponse
             {
                 id = 1,
-                name = "Leanne Graham",
+                name = "Leannes Graham",
                 username = "Bret",
                 email = "Sincere@april.biz",
                 phone = "1-770-736-8031 x56442",

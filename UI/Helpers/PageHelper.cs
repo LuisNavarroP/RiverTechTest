@@ -1,7 +1,7 @@
 ﻿using FluentAssertions;
 using OpenQA.Selenium;
 
-namespace RiverUITests.Helpers
+namespace UI.Helpers
 {
     public class PageHelper
     {
@@ -29,11 +29,11 @@ namespace RiverUITests.Helpers
         }
 
         // this method find the element by its locator, grab the text, remove the unwanted characters and assert the text with the expected text
-        public void ElementContainsTextCheck(IWebDriver driver, By locator, string expectedText, string failureMessage = null)
+        public void ElementValueTextCheck(IWebDriver driver, By locator, string expectedText, string failureMessage = null)
         {
             var elementText = driver.FindElement(locator).Text;
             string normalizedText = elementText.Replace(":", "").Replace("$", "").Trim();
-            normalizedText.Should().Contain(expectedText, failureMessage ?? $"Expected element '{locator}' to contain '{expectedText}', but found '{elementText}'");
+            normalizedText.Should().Be(expectedText, failureMessage ?? $"Expected element '{locator}' to be '{expectedText}', but found '{elementText}'");
         }
     }
 }
