@@ -25,14 +25,11 @@ namespace UI
                 .AddFileWriter<PlainTextReportFormatter>($"Reports/LightBDD_Report_{timestamp}.txt") 
                 .AddFileWriter<XmlReportFormatter>($"Reports/LightBDD_Report_{timestamp}.xml");
         }
-
-        
         protected override void OnSetUp()
         {
             WebDriverManager.SetupTest();
 
         }
-
         protected override void OnTearDown()
         {
             WebDriverManager.TearDown();

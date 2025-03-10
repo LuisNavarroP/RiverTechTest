@@ -6,7 +6,7 @@ namespace API.Helpers
 {
     public class ApiHelper
     {
-        // Execute a GET request to the endpoint and return the status code and the response body, deserilize the response body 
+        //Execute the GET request and deserialize the response
         public static (HttpStatusCode, T) ExecuteGetRequest<T>(string endpoint)
         {
             var client = new RestClient(endpoint);
