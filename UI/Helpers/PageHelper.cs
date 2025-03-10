@@ -1,7 +1,7 @@
 ﻿using FluentAssertions;
 using OpenQA.Selenium;
 
-namespace RiverUITests.Helpers
+namespace UI.Helpers
 {
     public class PageHelper
     {

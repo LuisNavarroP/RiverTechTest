@@ -2,7 +2,7 @@
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 
-namespace RiverUITests.Helpers
+namespace UI.Helpers
 {
     public static class WebDriverManager
     {

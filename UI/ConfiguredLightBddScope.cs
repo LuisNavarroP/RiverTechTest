@@ -4,14 +4,14 @@ using LightBDD.Framework.Configuration;
 using LightBDD.Framework.Reporting.Formatters;
 using LightBDD.NUnit3;
 using NUnit.Framework;
-using RiverUITests;
-using RiverUITests.Helpers;
+using UI;
+using UI.Helpers;
 
 // setting the parallel execution of test fixtures and setting up the config for all the tests
 [assembly: Parallelizable(ParallelScope.Fixtures)]
 [assembly: ConfiguredLightBddScope]
 
-namespace RiverUITests
+namespace UI
 {
     // Defining a configuration for the LightBDD reporting and getting the timestamp to make each report unique
     internal class ConfiguredLightBddScopeAttribute : LightBddScopeAttribute

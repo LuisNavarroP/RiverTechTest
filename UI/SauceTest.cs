@@ -4,9 +4,9 @@ using LightBDD.Framework.Scenarios;
 using LightBDD.NUnit3;
 using NUnit.Framework;
 using OpenQA.Selenium;
-using RiverUITests.Helpers;
+using UI.Helpers;
 
-namespace JacketExercise
+namespace UI
 {
     /// <summary>
     /// This test automates the purchase flow of a 'Sauce Labs Fleece Jacket'.
